@@ -21,6 +21,15 @@
             padding: 20px;
             text-align: center;
         }
+        #chatbot-container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            min-height: 400px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -30,23 +39,24 @@
     <main>
         <h2>Interactúa con Nuestro Chatbot</h2>
         <p>Descubre cómo podemos ayudarte hoy.</p>
-        <!-- Espacio reservado para el chatbot -->
+        <!-- Contenedor donde se mostrará el chatbot -->
         <div id="chatbot-container">
-            <!-- Asegúrate de integrar aquí tu chatbot de Stack AI -->
+            <!-- El chatbot se cargará aquí -->
         </div>
     </main>
     <footer>
         <p>Contacto: info@tuempresa.com</p>
     </footer>
 
-    <!-- Incluir cualquier script necesario para el chatbot aquí -->
+    <!-- Incluir el script del chatbot aquí -->
     <script src="https://api.stack-ai.com/inference/v0/run/fc0f65ad-3d7c-4bb0-aab6-433e39715c8c/661fdc6ac54372000249c80a"></script>
     <script>
-        // Código de inicialización del chatbot, ajustar según la documentación del proveedor
+        // Inicialización del chatbot
         window.onload = function() {
             if (typeof StackAI !== 'undefined') {
                 StackAI.init({
-                    apiKey: '0d7ac8fa-c0c6-4e18-a91f-62fcbc8d5d53'
+                    apiKey: '0d7ac8fa-c0c6-4e18-a91f-62fcbc8d5d53',
+                    containerId: 'chatbot-container' // Este ID debe coincidir con el ID del contenedor del chatbot
                 });
                 console.log("Chatbot initialized and ready!");
             } else {
@@ -56,3 +66,5 @@
     </script>
 </body>
 </html>
+
+     
