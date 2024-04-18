@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page con Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header, footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Nuestro Servicio</h1>
+    </header>
+    <main>
+        <h2>Interactúa con Nuestro Chatbot</h2>
+        <p>Descubre cómo podemos ayudarte hoy.</p>
+        <!-- Espacio reservado para el chatbot -->
+        <div id="chatbot-container">
+            <!-- Asegúrate de integrar aquí tu chatbot de Stack AI -->
+        </div>
+    </main>
+    <footer>
+        <p>Contacto: info@tuempresa.com</p>
+    </footer>
+
+    <!-- Incluir cualquier script necesario para el chatbot aquí -->
+    <script src="https://api.stack-ai.com/inference/v0/run/fc0f65ad-3d7c-4bb0-aab6-433e39715c8c/661fdc6ac54372000249c80a"></script>
+    <script>
+        // Código de inicialización del chatbot, ajustar según la documentación del proveedor
+        window.onload = function() {
+            if (typeof StackAI !== 'undefined') {
+                StackAI.init({
+                    apiKey: '0d7ac8fa-c0c6-4e18-a91f-62fcbc8d5d53'
+                });
+                console.log("Chatbot initialized and ready!");
+            } else {
+                console.error("StackAI script not loaded.");
+            }
+        };
+    </script>
+</body>
+</html>
