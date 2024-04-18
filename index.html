@@ -60,7 +60,7 @@
                 alert('Por favor, escribe algo para enviar al chatbot.');
                 return;
             }
-            query({"in-0": userInput, "user_id": "example_user_id"}).then((response) => {
+            query({"in-0": userInput, "user_id": "fc0f65ad-3d7c-4bb0-aab6-433e39715c8c"}).then((response) => {
                 document.getElementById("response").textContent = JSON.stringify(response, null, 2);
             }).catch((error) => {
                 document.getElementById("response").textContent = "Error al conectar con el chatbot: " + error.message;
